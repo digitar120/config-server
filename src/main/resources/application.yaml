@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: config-server
+
+  cloud:
+    config:
+      server:
+        git:
+          # https://cloud.spring.io/spring-cloud-config/multi/multi__spring_cloud_config_server.html
+          uri: https://github.com/digitar120/service-configuration
+          clone-on-start: true
+          default-label: master
+          username:
+          password:
+      label: master
+
+server:
+  port: 8888
+
+
+
